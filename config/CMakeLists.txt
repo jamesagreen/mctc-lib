@@ -14,7 +14,7 @@
 
 option(BUILD_SHARED_LIBS "Whether the libraries built should be shared" FALSE)
 
-option(WITH_OpenMP "Enable support for shared memory parallelisation with OpenMP" TRUE)
+option(WITH_OpenMP "Enable support for shared memory parallelisation with OpenMP" FALSE)
 option(WITH_JSON "Enable support for JSON parsing via json-fortran" FALSE)
 
 set(
