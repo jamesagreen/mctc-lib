@@ -51,17 +51,19 @@ if(
 endif()
 
 # Set build type as CMake does not provide defaults
-if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-  set(
-    CMAKE_BUILD_TYPE "RelWithDebInfo"
-    CACHE STRING "Build type to be used."
-    FORCE
-  )
-  message(
-    STATUS
-    "Setting build type to '${CMAKE_BUILD_TYPE}' as none was specified."
-  )
-endif()
+# JAG 28/02/25: Don't do this, will set the CMAKE_BUILD_TYPE 
+# to RelWithDebInfo for FHI-aims and add additional flags.
+#if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+#  set(
+#    CMAKE_BUILD_TYPE "RelWithDebInfo"
+#    CACHE STRING "Build type to be used."
+#    FORCE
+#  )
+#  message(
+#    STATUS
+#    "Setting build type to '${CMAKE_BUILD_TYPE}' as none was specified."
+#  )
+#endif()
 
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
